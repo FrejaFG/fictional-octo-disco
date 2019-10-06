@@ -47,10 +47,10 @@ y=np.asarray(linFunc(xs,par[0],par[1]))
 #plot og navngiv 
 plt.plot(xs,y,label="fit")
 #plot data med errorbars
-plt.errorbar(laengde,tid, xerr=usikkerhed, fmt="o",capsize=8, label="lyd under vand")
+plt.errorbar(laengde,tid, yerr=usikkerhed, fmt="o",capsize=8, label="lyd under vand")
 #tilføj aksebetegnesler.
 plt.xlabel("længden fra udsendelse [m]")
 plt.ylabel("tid fra udsendelse [s]")
-plt.legend()
+
 plt.tight_layout()#intet klippes fra grafen.
 plt.savefig("fit af lydens hastighed.png",dpi=300)
